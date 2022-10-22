@@ -24,7 +24,7 @@ func main() {
 		if resp.StatusCode == 200 {
 			fmt.Println(string(colorGreen), "Success Claim")
 		}
-		time.Sleep(4 * 60 * time.Second)
+		time.Sleep(60 * time.Second)
 	}
 
 }
