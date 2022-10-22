@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-
+	colorGreen := "\033[32m"
 	getURL := "https://icucu.icu/doge/pkjw-6065-kdrcbifgmtod"
 	data := url.Values{}
 	getHeader := "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
@@ -19,9 +19,11 @@ func main() {
 	request.Header.Add("content-type", "application/x-www-form-urlencoded")
 	request.Header.Add("Cookie", "PHPSESSID=6hrr260p5ul468n1q6u1nnnkd3")
 	for {
-		resp, _ := client.Do(request)
-		fmt.Println(resp.StatusCode)
-		time.Sleep(4 * 60 * time.Second)
+		resp, err:= client.Do(request)
+		if err != nil {
+		fmt.Println(string(colorGreen), "success Claim")
+		}
+		time.Sleep(60 * time.Second)
 	}
 
 }
