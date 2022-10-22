@@ -19,11 +19,11 @@ func main() {
 	request.Header.Add("content-type", "application/x-www-form-urlencoded")
 	request.Header.Add("Cookie", "PHPSESSID=6hrr260p5ul468n1q6u1nnnkd3")
 	for {
-		resp:= client.Do(request)
-		if resp != nil {
-		fmt.Println(string(colorGreen), "success Claim")
+		resp, _ := client.Do(request)
+		if resp.StatusCode == 200 {
+			fmt.Println(string(colorGreen), "Success Claim")
 		}
-		time.Sleep(60 * time.Second)
+		time.Sleep(4 * 60 * time.Second)
 	}
 
 }
