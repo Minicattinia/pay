@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func claim() {
+func main() {
 	var getURL, getHeader, getCookie string
 	var getDelay int
 	colorGreen := "\033[32m"
