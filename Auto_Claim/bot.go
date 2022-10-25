@@ -14,12 +14,12 @@ func main() {
 	colorGreen := "\033[32m"
 	data := url.Values{}
 	getHeader = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
-	fmt.Print("Insert web site Url")
-	fmt.Scan(&getURL)
-	fmt.Print("Insert web Cookie")
-	fmt.Scan(&getCookie)
-	fmt.Print("Insert Claim Dealey Minute")
+	fmt.Print("Insert Claim Dealey Minute : ")
 	fmt.Scan(&getDelay)
+	fmt.Print("Insert web site Url : ")
+	fmt.Scan(&getURL)
+	fmt.Print("Insert web Cookie : ")
+	fmt.Scan(&getCookie)
 	client := &http.Client{}
 	request, _ := http.NewRequest(http.MethodGet, getURL, strings.NewReader(data.Encode()))
 	request.Header.Add("User-Agent", getHeader)
