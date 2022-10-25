@@ -17,7 +17,7 @@ func main() {
 	request, _ := http.NewRequest(http.MethodGet, getURL, strings.NewReader(data.Encode()))
 	request.Header.Add("User-Agent", getHeader)
 	request.Header.Add("content-type", "application/x-www-form-urlencoded")
-	request.Header.Add("Cookie", "PHPSESSID=6hrr260p5ul468n1q6u1nnnkd3")
+	request.Header.Add("Cookie", "PHPSESSID=6hrr260p5ul468n1q6u1nnnkd3; io=QMAc5JTtGrbTiZXpC3VQ")
 	for {
 		resp, _ := client.Do(request)
 		if resp.StatusCode == 200 {
